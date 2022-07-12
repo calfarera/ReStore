@@ -1,11 +1,18 @@
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
+// Import React's Components
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Product } from '../../app/Models/Product'
+
+// Import Components
+import { Product } from '../../app/Models/Product';
+
+// Import Material-UI
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 
 interface Props {
     product: Product;
 }
 
+// Codes
 export default function ProductCard({product}: Props) {
   return (
     <div>

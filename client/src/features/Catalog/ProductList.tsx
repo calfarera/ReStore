@@ -1,4 +1,7 @@
-import { Grid } from '@mui/material'
+// Import Material-UI
+import { Grid } from '@mui/material';
+
+// Import Components
 import { Product } from "../../app/Models/Product";
 import ProductCard from './ProductCard';
 
@@ -6,6 +9,7 @@ interface Props {
     products: Product[];
 }
 
+// Codes
 export default function ProductList({products}: Props) {
   return (
     <div>

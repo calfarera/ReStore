@@ -1,18 +1,28 @@
+// Import React's Components
 import React from 'react';
+import * as ReactDom from "react-dom";
 import ReactDOM from 'react-dom/client';
-import './app/Layout/Styles.css';
-import App from './app/Layout/App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+
+// Import Components
+import App from './app/Layout/App';
+
+// Import CSS
+import './app/Layout/Styles.css';
+
+// History
+export const history = createBrowserHistory({});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HistoryRouter history={history}>
       <App />
-    </BrowserRouter>
+    </HistoryRouter>
   </React.StrictMode>
 );
 
